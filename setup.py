@@ -52,8 +52,8 @@ if sys.version_info[0] >= 3:
                          'zip_safe': False,
                          'install_requires': ['python-dateutil >= 2',
                                               'pytz >= 2011k',
-                                              'numpy >= %s' % min_numpy_ver],
-                         'setup_requires': ['numpy >= %s' % min_numpy_ver],
+                                              'numpy == %s' % min_numpy_ver],
+                         'setup_requires': ['numpy == %s' % min_numpy_ver],
                          }
     if not _have_setuptools:
         sys.exit("need setuptools/distribute for Py3k"
@@ -63,8 +63,8 @@ else:
     setuptools_kwargs = {
         'install_requires': ['python-dateutil',
                             'pytz >= 2011k',
-                             'numpy >= %s' % min_numpy_ver],
-        'setup_requires': ['numpy >= %s' % min_numpy_ver],
+                             'numpy == %s' % min_numpy_ver],
+        'setup_requires': ['numpy == %s' % min_numpy_ver],
         'zip_safe': False,
     }
 
